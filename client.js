@@ -35,9 +35,24 @@ function newEmployee(){
 
 function addEmployee(){
     //take input from dom and then reset inputs to clear them
+    let firstName = $('first-name').val();
+    let lastName = $('last-name').val();
+    let employeeNumber = $('emp-number').val();
+    let jobTitle = $('job-title').val();
+    let salary = parseInt($('salary').val());
+    console.log('adding employee', employee);
+
+    newEmployee(firstName, lastName, employeeNumber, jobTitle, salary);
+    //calling function to trigger push to array
 }
 
 function appendEmployee(){
+    console.log(employee);
+    $('#employee-table').empty();
+    for(let employee of employee){
+        $('#employee-table')
+    }
+
     //this function will append the employee with
     //all the inormation
 }

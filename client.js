@@ -103,8 +103,3 @@ function deleteRow(){
     //in base mode it will not affect the total calculation
 }
 
-//functions to gather form information
-//store the information  to calculate monthly costs
-//append information to dom
-//clear input fields(reset input val to empty string)
-//somewhere to store employees

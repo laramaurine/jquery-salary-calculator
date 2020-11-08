@@ -38,6 +38,7 @@ function addEmployee(){
 
     newEmployee(firstName, lastName, employeeNumber, jobTitle, salary);
     appendEmployee();
+    calculateCost();
     console.log($('#firstName').val());
     //calling function to trigger push to array
 
@@ -54,7 +55,7 @@ function appendEmployee(){
     console.log(employeeInventory);
     $('#employeeTable').empty();
     for(let employee of employeeInventory){
-        $('#employee-table').append(
+        $('#employeeTable').append(
         `<tr> 
             <td>${employee.firstName}</td>
             <td>${employee.lastName}</td>
@@ -64,6 +65,7 @@ function appendEmployee(){
             <td><button class="deleteBtn">DELETE</button></td>
         </tr>`
         )
+        console.log(employee.firstName);
     }
 
     //this function will append the employee with
@@ -71,8 +73,19 @@ function appendEmployee(){
 }
 
 function calculateCost(){
-    //calculate monthly cost will include if statement
-    //to change css class if monthly cost exceed 20,000
+    let yearlyExpense = 0;
+    for(let i=0; i<employeeInventory.length; i++){
+        console.log(employeeInventory[i]);
+        console.log(employeeInventory[i].salary);
+        yearlyExpense = yearlyExpense + employeeInventory[i].salary;
+        console.log(yearlyExpense);
+    }
+    monthlyExpense = yearlyExpense/12;
+    console.log(monthlyExpense);
+    $('#monthlyExpense').empty() 
+    $('ul').append('<ul>'+monthlyExpense+ '</ul>') 
+    return monthlyExpense;
+
 }
 function toggleClass(){
     //will contain if statement to toggle between

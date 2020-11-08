@@ -12,7 +12,7 @@ function handleReady() {
 let employeeInventory = [];
 //employee info will be stored here
 
-function newEmployee(){
+function newEmployee(firstName, lastName, empNumber, jobTitle, salary){
     //will take data and push into array creating the new employee object 
     console.log(firstName, lastName, empNumber, jobTitle, salary);
     const employee ={
@@ -29,11 +29,11 @@ function newEmployee(){
 
 function addEmployee(){
     //take input from dom and then reset inputs to clear them
-    let firstName = $('firstName').val();
-    let lastName = $('lastName').val();
-    let employeeNumber = $('empNumber').val();
-    let jobTitle = $('jobTitle').val();
-    let salary = parseInt($('salary').val());
+    let firstName = $('#firstName').val();
+    let lastName = $('#lastName').val();
+    let employeeNumber = $('#empNumber').val();
+    let jobTitle = $('#jobTitle').val();
+    let salary = parseInt($('#salary').val());
     console.log('adding employee');
 
     newEmployee(firstName, lastName, employeeNumber, jobTitle, salary);

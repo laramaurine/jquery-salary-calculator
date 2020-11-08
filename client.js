@@ -18,7 +18,7 @@ function newEmployee(firstName, lastName, empNumber, jobTitle, salary){
     const employee ={
         firstName:firstName,
         lastName:lastName,
-        employeeNumber:empNumber,
+        empNumber:empNumber,
         jobTitle:jobTitle,
         salary:salary
     }

@@ -15,7 +15,7 @@ function handleReady() {
 //somewhere to store employees
 
 let employeeInventory = [];
-
+//employee info will be stored here
 
 function newEmployee(){
     //will take data and push into array creating the new employee object
@@ -34,6 +34,10 @@ function appendEmployee(){
 function calculateCost(){
     //calculate monthly cost will include if statement
     //to change css class if monthly cost exceed 20,000
+}
+function toggleClass(){
+    //will contain if statement to toggle between
+    //red and not red - may not need to be seperate function
 }
 
 function deleteRow(){

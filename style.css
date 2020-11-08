@@ -15,3 +15,14 @@ th{
     border: 1px solid black;
     width: 153px;
 }
+td{
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: 153px;
+}
+ul{
+    text-align: right;
+}
+.red{
+    background-color: red;
+}

@@ -31,7 +31,7 @@ function addEmployee(){
     //take input from dom and then reset inputs to clear them
     let firstName = $('#firstName').val();
     let lastName = $('#lastName').val();
-    let employeeNumber = $('#empNumber').val();
+    let employeeNumber = parseInt($('#empNumber').val());
     let jobTitle = $('#jobTitle').val();
     let salary = parseInt($('#salary').val());
     console.log('adding employee');
@@ -83,14 +83,17 @@ function calculateCost(){
     monthlyExpense = yearlyExpense/12;
     console.log(monthlyExpense);
     $('#monthlyExpense').empty() 
-    $('ul').append('<ul>'+monthlyExpense+ '</ul>') 
+    $('ul').append( '<ul>'+monthlyExpense+ '</ul>') 
+   
+    if(monthlyExpense > 20000){
+        $('ul').toggleClass('red')
+    }
     return monthlyExpense;
 
+    
+
 }
-function toggleClass(){
-    //will contain if statement to toggle between
-    //red and not red - may not need to be seperate function
-}
+
 
 function deleteRow(){
     console.log("clicked");

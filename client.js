@@ -4,6 +4,7 @@ $( document ).ready( handleReady );
 
 function handleReady() {
     console.log('jQuery has joined the party');
+    $('#submit').on('click', addEmployee);
 
     //click handlers for adding and deleting will go here
 }
@@ -19,38 +20,47 @@ let employeeInventory = [];
 
 function newEmployee(){
     //will take data and push into array creating the new employee object
-    console.log(first-name, last-name, emp-number, job-title, salary);
+    //console.log(first-name, last-name, emp-number, job-title, salary);
     const employee ={
     
-        firstName:first-name,
-        lastName:last-name,
-        employeeNumber:emp-number,
-        jobTitle:job-title,
+        firstName:firstName,
+        lastName:lastName,
+        employeeNumber:empNumber,
+        jobTitle:jobTitle,
         salary:salary
 
     }
-    inventory.push(employee)
+    employeeInventory.push(employee)
     return true;
 }
 
 function addEmployee(){
     //take input from dom and then reset inputs to clear them
-    let firstName = $('first-name').val();
-    let lastName = $('last-name').val();
-    let employeeNumber = $('emp-number').val();
-    let jobTitle = $('job-title').val();
+    let firstName = $('firstName').val();
+    let lastName = $('lastName').val();
+    let employeeNumber = $('empNumber').val();
+    let jobTitle = $('jobTitle').val();
     let salary = parseInt($('salary').val());
-    console.log('adding employee', employee);
+    console.log('adding employee');
 
     newEmployee(firstName, lastName, employeeNumber, jobTitle, salary);
     //calling function to trigger push to array
 }
 
 function appendEmployee(){
-    console.log(employee);
+    console.log(employeeInventory);
     $('#employee-table').empty();
     for(let employee of employee){
-        $('#employee-table')
+        $('#employee-table').append(
+        `<tr> 
+            <td>${employee.first-name}</td>
+            <td>${employee.last-name}</td>
+            <td>${employee.emp-number}</td>
+            <td>${employee.job-title}</td>
+            <td>$${employee.salary}</td>
+            <td><button class="deleteBtn">DELETE</button></td>
+        </tr>`
+        )
     }
 
     //this function will append the employee with

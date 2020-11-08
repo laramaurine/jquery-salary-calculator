@@ -19,7 +19,18 @@ let employeeInventory = [];
 
 function newEmployee(){
     //will take data and push into array creating the new employee object
+    console.log(first-name, last-name, emp-number, job-title, salary);
+    const employee ={
+    
+        firstName:first-name,
+        lastName:last-name,
+        employeeNumber:emp-number,
+        jobTitle:job-title,
+        salary:salary
 
+    }
+    inventory.push(employee)
+    return true;
 }
 
 function addEmployee(){

@@ -1,3 +1,17 @@
 body{
     background-color: teal;
 }
+table{
+    
+    border-collapse: collapse;
+    border: 1px solid black;
+    text-align: left;
+    width: 153 px;
+    
+}
+th{
+
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: 153px;
+}
